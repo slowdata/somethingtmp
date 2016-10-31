@@ -9,14 +9,14 @@ $(document).ready(function() {
 
     var serviceURL = 'http://192.168.1.70:8000/pg.asmx';
     var soapRequest=
-      `<?xml version="1.0" encoding="utf-8"?>
-        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-          <soap:Body>
-            <PS xmlns="http://tempuri.org/">
-              <niss>${nissInput.value}</niss>
-            </PS>
-          </soap:Body>
-        </soap:Envelope>`
+      '<?xml version="1.0" encoding="utf-8"?>\
+        <soap:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">\
+          <soap:Body>\
+            <PS xmlns="http://tempuri.org/">\
+              <niss>${nissInput.value}</niss>\
+            </PS>\
+          </soap:Body>\
+        </soap:Envelope>'
 
     $.ajax({
       type: 'POST',
