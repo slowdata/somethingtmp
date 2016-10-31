@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gera Passwords para PTSS</title>
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" title="no title">
+  <script type="text/javascript" src="jquery.min.js"></script>
+  <script src="clipboard.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+        <h1>Gerador de Passwords para PTSS</h1>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <form id="getPassword" class="form-horizontal">
+          <div class="form-group" action="#">
+            <label for="niss" class="col-md-2 control-label">Niss:</label>
+            <div class="col-md-8">
+              <input type="text" class="form-control" id="nissInput"
+              placeholder="Insira o niss">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <input id="ps-nome" class="form-control" type="text"
+        placeholder="Nome" readonly>
+        <br>
+        <input id="ps-morada" class="form-control" type="text"
+        placeholder="Morada" readonly>
+        <br>
+        <input id="ps-niss" class="form-control" type="text"
+        placeholder="Niss" readonly>
+      </div>
+    </div> <!-- ROW -->
+
+    <br>
+    <br>
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+
+        <div id="pass-alert" class="alert alert-success" role="alert">
+          <h2 id="pw" class="text-center">PASSWORD</h2>
+        </div>
+        <button id="copy-button" alt="Copiar para o clipboard"
+          class="btn btn-default"
+          data-clipboard-target="#pw">Copy
+        </button>
+        <!-- <div class="input-group input-group-lg">
+          <input type="text" class="form-control alert-success" placeholder="Password">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="Password">Copy</button>
+          </span>
+
+        </div> -->
+
+
+      </div>
+    </div>
+
+
+  </div> <!-- Container -->
+</body>
+</html>
